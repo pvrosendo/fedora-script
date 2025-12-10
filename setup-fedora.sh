@@ -85,6 +85,10 @@ flatpak install flathub md.obsidian.Obsidian -y
 echo -e "${GREEN}⚡ Installing Warp Terminal...${NC}"
 sudo dnf install "https://app.warp.dev/get_warp?package=rpm" -y
 
+# Dbeaver Community
+echo -e "${GREEN} Installing Dbeaver Community...${NC}"
+flatpak install flathub io.dbeaver.DBeaverCommunity
+
 # VS Code
 echo -e "${GREEN}💻 Installing Visual Studio Code...${NC}"
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\n" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
